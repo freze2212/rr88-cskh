@@ -136,6 +136,7 @@ body {
     background-size: 100% 100%;
     background-position: center;
     margin-top: -2.5rem; /* -40px */
+    min-height: 16.75rem; /* 300px - increased height for box-big */
 }
 
 .section-content-small {
@@ -175,6 +176,24 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0.3rem; /* 6px */
+}
+
+.action-grid-2x3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.3rem; /* 6px */
+}
+
+.action-grid-2x3 .centered-item {
+    grid-column: 1 / 3; /* Span across both columns */
+    max-width: 50%; /* Take up half the width */
+    margin: 0 auto; /* Center it */
+}
+
+/* Experience Section - Push items down */
+.experience-grid {
+    margin-top: 1.4rem; /* Push down items in experience section */
 }
 
 .action-grid-1x2 {
@@ -343,11 +362,17 @@ body {
 
     .section-content-large {
         padding: 1.675rem 0.5rem 0.75rem 0.5rem; /* 26px 12px 12px 12px */
+        min-height: 9rem; /* Mobile height for box-big */
     }
 
     .section-content-small {
         min-height: 1.875rem; /* 30px */
         padding: 1.25rem 0.5rem 0.75rem 0.5rem; /* 20px 12px 12px 12px */
+    }
+
+    /* Experience Section Mobile - Push items down */
+    .experience-grid {
+        margin-top: 0.9rem; /* Push down items in experience section on mobile */
     }
 
     .action-img {
